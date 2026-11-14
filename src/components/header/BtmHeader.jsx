@@ -4,14 +4,16 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import { Link, useLocation } from 'react-router-dom';
 import { PiSignInBold } from "react-icons/pi";
 import { FaUserPlus } from "react-icons/fa6";
+import { title } from 'framer-motion/client';
 
 
 const NavLinks = [
   {title: "Home" , link : "/"},
   { title: "About", link: "/about" },
-  { title: "Accessories", link: "/accessories" },
+  
   { title: "Blog", link: "/blog" },
   { title: "Contact", link: "/contact" },
+  { title: "Register", link: "/register"}
 ]
 
 function BtmHeader() {
@@ -69,7 +71,7 @@ function BtmHeader() {
 
         <div className="sign_regs_icon">
           <Link to="/"><PiSignInBold /></Link>
-          <Link to="/"><FaUserPlus /></Link>
+          
         </div>
       </div>
       

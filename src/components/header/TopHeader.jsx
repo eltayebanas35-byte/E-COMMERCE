@@ -6,6 +6,7 @@ import { TiShoppingCart } from "react-icons/ti";
 import "./header.css";
 import { CartContext } from "../context/CartContext";
 import SerachBox from "./SerachBox";
+import { FaUserPlus } from"react-icons/fa6"
 
 function TopHeader() {
   const { cartItems, favorites } = useContext(CartContext);
@@ -27,7 +28,11 @@ function TopHeader() {
               <span className="count">{favorites.length}</span>
             </Link>
           </div>
-
+          <div className="icon">
+  <Link to="/register">
+    <FaUserPlus />
+  </Link>
+</div>
           <div className="icon">
             <Link to="/cart">
               <TiShoppingCart />

@@ -10,7 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import CategoryPage from "./page/CategoryPage/CategoryPage";
 import SearchResults from "./page/SearchResults";
 import Favorites from "./page/favorites/Favorites"
-
+import Register from "./page/register/Register";
 function App() {
   return (
     <>
@@ -35,6 +35,88 @@ function App() {
       <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route
+  path="/about"
+  element={
+    <div style={{ padding: "50px", color: "white" }}>
+      <h1>About Us</h1>
+      <p>
+        Welcome to Anas Online Shop! We provide high-quality products
+        with the best prices and a simple shopping experience.
+      </p>
+    </div>
+  }
+/>
+
+<Route path="/register"
+element={<Register />} />
+
+<Route
+  path="/blog"
+  element={
+    <div style={{ padding: "50px", color: "white" }}>
+      <h1>Our Blog</h1>
+      <h3>Latest News</h3>
+      <p>Discover the latest products, offers, and shopping tips.</p>
+    </div>
+  }
+/>
+
+<Route
+  path="/contact"
+  element={
+    <div style={{ padding: "50px", color: "white" }}>
+      <h1>Contact Us</h1>
+      <p>Email: info@anasshop.com</p>
+      <p>Phone: +20 100 0000000</p>
+      <p>We are always happy to help you!</p>
+    </div>
+  }
+/>
+<Route
+  path="/register"
+  element={
+    <div style={{ padding: "50px", color: "white" }}>
+      <h1>Customer Registration</h1>
+
+      <form>
+        <div>
+          <label>Full Name</label>
+          <br />
+          <input type="text" placeholder="Enter your full name" />
+        </div>
+
+        <br />
+
+        <div>
+          <label>Email</label>
+          <br />
+          <input type="email" placeholder="Enter your email" />
+        </div>
+
+        <br />
+
+        <div>
+          <label>Phone Number</label>
+          <br />
+          <input type="tel" placeholder="Enter your phone number" />
+        </div>
+
+        <br />
+
+        <div>
+          <label>Password</label>
+          <br />
+          <input type="password" placeholder="Enter your password" />
+        </div>
+
+        <br />
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  }
+/>
           <Route path="/cart" element={<Cart />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/favorites" element={<Favorites />} />

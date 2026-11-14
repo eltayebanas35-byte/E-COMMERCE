@@ -11,7 +11,18 @@ function Cart() {
 
     const total = cartItems.reduce((acc , item) => acc + item.price * item.quantity, 0)
     
+const handlePlaceOrder = () => {
+    if (cartItems.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
 
+    const handlePlaceOrder = () => {
+  alert(" successfullyYour order has been placed!");
+
+  clearCart();
+};
+};
   return (
     <PageTransition>
         <div className='checkout'>
@@ -55,7 +66,15 @@ function Cart() {
                 </div>
 
                 <div className="button_div">
-                    <button type='submit'>Place Order</button>
+                   
+               <button
+  onClick={() => {
+    window.alert("Your order has been placed successfully!");
+    clearCart();
+  }}
+>
+  Place Order
+</button>
                 </div>
             </div>
         </div>
